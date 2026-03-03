@@ -4,6 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<style>html,body{background:#0a0a0a!important}</style>
 <title>GYM PLAN — ASHOK</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -11,11 +13,11 @@
     --bg: #0a0a0a;
     --surface: #111111;
     --card: #161616;
-    --border: #222;
+    --border: #2a2a2a;
     --accent: #c8f135;
     --accent-dim: rgba(200,241,53,0.12);
     --text: #f0f0f0;
-    --muted: #555;
+    --muted: #888888;
     --chest: #ff6b6b;
     --back: #4ecdc4;
     --legs: #ffe66d;
@@ -36,13 +38,28 @@ background: #0a0a0a !important;
 body {
 background: #0a0a0a !important;
 background-color: #0a0a0a !important;
-color: var(–text);
+color: #f0f0f0 !important;
 font-family: ‘DM Sans’, sans-serif;
 min-height: 100vh;
 padding: 40px 20px 80px;
 -webkit-text-size-adjust: 100%;
 color-scheme: dark;
 }
+
+/* GLOBAL FORCED COLORS */
+body, body * { color: inherit; }
+.exercise-name { color: #f0f0f0 !important; }
+.badge { color: #aaaaaa !important; }
+.badge strong { color: #f0f0f0 !important; }
+.muscle-name { color: #888888 !important; }
+.muscle-count { color: #666666 !important; }
+.header-meta { color: #888888 !important; }
+.progress-text { color: #888888 !important; }
+.day-title { color: #f0f0f0 !important; }
+.logo { color: #c8f135 !important; }
+.logo span { color: #f0f0f0 !important; }
+.constant-label { color: #c8f135 !important; }
+.constant-value { color: #f0f0f0 !important; }
 
 /* ── HEADER ── */
 header {
@@ -64,13 +81,13 @@ line-height: 1;
 color: var(–accent);
 }
 
-.logo span { color: var(–text); }
+.logo span { color: #f0f0f0 !important; }
 
 .header-meta {
 text-align: right;
 font-family: ‘DM Mono’, monospace;
 font-size: 11px;
-color: var(–muted);
+color: #888888;
 letter-spacing: 1px;
 text-transform: uppercase;
 line-height: 1.8;
@@ -113,7 +130,7 @@ margin-bottom: 4px;
 .constant-value {
 font-size: 14px;
 font-weight: 500;
-color: var(–text);
+color: #f0f0f0 !important;
 }
 
 /* ── NAV TABS ── */
@@ -131,22 +148,22 @@ scrollbar-width: none;
 
 .day-tab {
 flex-shrink: 0;
-background: var(–surface);
-border: 1px solid var(–border);
+background: #111111;
+border: 1px solid #2a2a2a;
 border-radius: 3px;
 padding: 10px 20px;
 font-family: ‘DM Mono’, monospace;
 font-size: 11px;
 letter-spacing: 2px;
 text-transform: uppercase;
-color: var(–muted);
+color: #888888;
 cursor: pointer;
 transition: all 0.2s;
 }
 
 .day-tab:hover {
-color: var(–text);
-border-color: var(–muted);
+color: #f0f0f0 !important;
+border-color: #888888;
 }
 
 .day-tab.active {
@@ -171,7 +188,7 @@ margin-bottom: 24px;
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: 40px;
 letter-spacing: 3px;
-color: var(–text);
+color: #f0f0f0 !important;
 }
 
 .muscle-pills {
@@ -213,22 +230,22 @@ font-family: ‘DM Mono’, monospace;
 font-size: 11px;
 text-transform: uppercase;
 letter-spacing: 3px;
-color: var(–muted);
+color: #888888;
 }
 
 .muscle-count {
 margin-left: auto;
 font-family: ‘DM Mono’, monospace;
 font-size: 10px;
-color: var(–muted);
+color: #888888;
 }
 
 /* ── EXERCISE ROWS ── */
 .exercise-list { display: flex; flex-direction: column; gap: 6px; }
 
 .exercise-row {
-background: var(–card);
-border: 1px solid var(–border);
+background: #161616;
+border: 1px solid #2a2a2a;
 border-radius: 4px;
 padding: 14px 18px;
 display: grid;
@@ -269,7 +286,7 @@ text-decoration: line-through;
 
 .check-box {
 width: 18px; height: 18px;
-border: 1px solid var(–border);
+border: 1px solid #2a2a2a;
 border-radius: 2px;
 flex-shrink: 0;
 display: flex; align-items: center; justify-content: center;
@@ -287,19 +304,19 @@ color: #000;
 .exercise-name {
 font-size: 14px;
 font-weight: 400;
-color: var(–text);
+color: #f0f0f0 !important;
 letter-spacing: 0.2px;
 }
 
 .badge {
 font-family: ‘DM Mono’, monospace;
 font-size: 11px;
-color: var(–muted);
+color: #888888;
 white-space: nowrap;
 }
 
 .badge strong {
-color: var(–text);
+color: #f0f0f0 !important;
 font-weight: 500;
 }
 
@@ -309,10 +326,10 @@ align-items: center;
 gap: 6px;
 font-family: ‘DM Mono’, monospace;
 font-size: 10px;
-color: var(–muted);
+color: #888888;
 text-decoration: none;
 padding: 5px 10px;
-border: 1px solid var(–border);
+border: 1px solid #2a2a2a;
 border-radius: 2px;
 transition: all 0.2s;
 white-space: nowrap;
@@ -336,7 +353,7 @@ gap: 16px;
 .progress-track {
 flex: 1;
 height: 3px;
-background: var(–surface);
+background: #111111;
 border-radius: 2px;
 overflow: hidden;
 }
@@ -352,7 +369,7 @@ width: 0%;
 .progress-text {
 font-family: ‘DM Mono’, monospace;
 font-size: 11px;
-color: var(–muted);
+color: #888888;
 white-space: nowrap;
 }
 
